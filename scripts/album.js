@@ -28,6 +28,21 @@ var albumPicasso = {
      ]
  };
 
+var albumRollingStones = {
+     title: 'Aftermath',
+     artist: 'the Rolling Stones',
+     label: 'Decca',
+     year: '1966',
+     albumArtUrl: 'assets/images/album_covers/14.png',
+     songs: [
+         { title: 'Paint It Black', duration: '3:22' },
+         { title: 'Stupid Girl', duration: '2:56' },
+         { title: 'Lady Jane', duration: '3:08'},
+         { title: 'Under My Thumb', duration: '3:41' },
+         { title: 'Doncha Bother Me', duration: '2:41'}
+     ]
+ };
+
 var createSongRow = function (songNumber, songName, songLength) {
     var template =
         '<tr class="album-view-song-item">'
@@ -62,3 +77,13 @@ var setCurrentAlbum = function (album) {
 window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
+
+document.getElementsByClassName('album-cover-art')[0].addEventListener('click', function(){
+    if (document.getElementsByClassName('album-view-title')[0].firstChild.nodeValue == 'The Colors') {
+        setCurrentAlbum(albumMarconi);
+    } else if (document.getElementsByClassName('album-view-title')[0].firstChild.nodeValue == 'The Telephone') {
+        setCurrentAlbum(albumRollingStones);
+    } else {
+        setCurrentAlbum(albumPicasso);
+    }
+});
