@@ -154,11 +154,11 @@ var previousSong = function() {
 
 var togglePlayFromPlayerBar = function () {
     if (currentSoundFile.isPaused()) {
-        $('.song-item-number').html(pauseButtonTemplate);
+        $('.album-song-button').html(pauseButtonTemplate);
         $(this).html(playerBarPauseButton);
         currentSoundFile.play();
     }else {
-        $('.song-item-number').html(playButtonTemplate);
+        $('.album-song-button').html(playButtonTemplate);
         $(this).html(playerBarPlayButton);
         currentSoundFile.pause();
     }
@@ -172,7 +172,7 @@ var updatePlayerBarSong = function() {
 }
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
-var pauseButtonTemplate = '<a class="album-son-button"><span class="ion-pause"></span></a>';
+var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
 var playerBarPlayButton = '<span class="ion-play"></span>';
 var playerBarPauseButton = '<span class="ion-pause"></span>';
 
