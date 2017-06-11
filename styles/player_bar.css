@@ -92,7 +92,7 @@
 
 .seek-bar .fill {
     background-color: white;
-    width: 36%;
+    width: 0%;
     height: 0.25rem;
     border-radius: 2px;
 }
@@ -102,7 +102,7 @@
     height: 0.5rem;
     width: 0.5rem;
     background-color: white;
-    left: 36%;
+    left: 0%;
     top: 50%;
     margin-left: -0.25rem;
     margin-top: -0.25rem;
@@ -138,6 +138,18 @@
     font-size: 1.1rem;
     display: inline-block;
     vertical-align: middle;
+    -webkit-transition: font-size 100ms ease-in-out,
+    -moz-transition: font-size 100ms ease-in-out,
+    transition: font-size 100ms ease-in-out,
+}
+
+.volume-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.volume-icon:hover .icon {
+    font-size: 2rem;
 }
 
 .player-bar .volume .seek-bar {
